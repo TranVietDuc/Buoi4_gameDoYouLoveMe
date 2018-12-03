@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Do you love me?</title>
+</head>
+<body>
+    <h1>Do you love me? </h1>
+    <input type="button" id="btnYes" value="Yes" style="position:relative; top:10px ; left: 30px; width: 40px; height: 30px; "/>
+    <input type="button" id="btnNo" value="No" style="position:relative ;top: 10px; left: 70px ; width: 40px; height: 30px; "/>
+<script>
+    var ButtonYes= document.getElementById("btnYes");
+    var ButtonNo = document.getElementById("btnNo");
+    function responseForYes(){
+        alert("How about our children 's names?");
+    }
+    function responseForNo(){
+        ButtonNo.style.top = Math.floor(Math.random()*window.innerHeight) + "px";
+        ButtonNo.style.left = Math.floor(Math.random()*windown.innerWidth) + "px";
+    }
+    ButtonYes.addEventListener("click",responseForYes);
+    ButtonNo.addEventListener("mouseover",responseForNo);
+</script>
+</body>
+</html>
